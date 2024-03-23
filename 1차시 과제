@@ -1,0 +1,78 @@
+// 1번 문제 
+
+#include<stdio.h>
+
+int main() {
+
+	printf("Hello");
+
+	return 0;
+} 
+
+// 2번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("Hello World");
+
+	return 0; 
+} 
+
+// 3번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("Hello\nWorld");
+	return 0;
+} 
+
+// 4번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("\'Hello\'");
+	return 0; 
+} 
+
+// 5번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("\"Hello World\"");
+	return 0;
+} 
+
+// 6번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("\"!@$%^&*()\"");
+	return 0;
+} 
+
+// 7번 문제 
+#include<stdio.h>
+
+int main() {
+
+	printf("\"C:\\Download\\hello.cpp\"");
+	return 0;
+} 
+
+// 8번 문제 넘어가기 
+
+//10번 문제 
+# include<stdio.h>
+
+int main() {
+
+	int a = 3;
+	printf("a에 저장되어있는 정수는 %d 입니다", a);
+	return 0;
+}
+
