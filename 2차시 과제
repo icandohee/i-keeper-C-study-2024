@@ -1,0 +1,148 @@
+1067
+
+//sol1
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void) {
+    int a;
+
+    printf("input:");
+    scanf("%d", &a);
+
+    if (a > 0)  printf("양수");
+    else if (a == 0) printf("0");
+    else printf("음수");
+
+    printf("\n");
+
+    if (a % 2 == 0) printf("짝수");
+    else            printf("홀수");
+
+    return 0;
+}
+
+// sol2
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void) {
+    int a;
+
+    printf("input:");
+    scanf("%d", &a);
+
+    if (a > 0) {
+        printf("양수\n");
+        if (a % 2 == 0) printf("짝수");
+        else        printf("홀수");
+    }
+    else if (a == 0) printf("0");
+    else {
+        printf("음수\n");
+        if (a % 2 == 0) printf("짝수");
+        else         printf("홀수");
+    }
+
+    return 0;
+}
+
+
+1068
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int a;
+	printf("점수를 입력하시오 : ");
+	scanf("%d", &a);
+
+	if (a >= 90)
+	
+		printf("A");
+
+	else if (a >= 70)
+		
+		printf("B");
+
+	else if (a >= 40)
+
+		printf("C");
+
+	else if (a >= 0)
+				
+		printf("D");
+				
+		return 0;
+} 
+
+1069
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main() {
+
+	char a[10];
+
+	printf("input: ");
+	scanf("%c", &a);
+
+	switch (a[0]) {
+	case'A':
+		printf("BEST");
+		break;
+	case'B':
+		printf("GOOD");
+		break;
+	case'C':
+		printf("RUN !!!");
+		break;
+
+	case'D':
+		printf("SLOWLY");
+		break;
+	}
+}
+
+1070
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main() {
+
+	int a;
+
+	printf("input: ");
+	scanf("%d", &a);
+
+	switch(a){
+	
+	case 12:
+	case 1:
+	case 2:
+		printf("WINTER");
+		break;
+	case 3:
+	case 4:
+	case 5:
+		printf("SPRING");
+		break;
+	case 6:
+	case 7:
+	case 8:
+		printf("SUMMER");
+		break;
+	case 9:
+	case 10:
+	case 11:
+		printf("FALL");
+		break;
+	default:
+		printf("invaild");
+		break;
+     }
+}
