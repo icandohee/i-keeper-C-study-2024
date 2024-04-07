@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() { 
+     int i = 0 ;  
+     while(i<5){
+
+        int j = 0; 
+        while(j<5){ //별 5개 맞춰주기 위한 조건 
+            printf("*\t");
+            j=j+1;
+        }
+        printf("\n");
+        i=i+1; // 그래야 5줄만 나옴 
+     }
+     return 0; 
+}
