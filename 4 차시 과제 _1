@@ -1,0 +1,26 @@
+for (i = 0; i < 2; ++i)  // 0 ~ 1 행
+   {
+      for (j = 0; j < 3; ++j)  // 0 ~ 2열
+      {
+         aList[i][3] += aList[i][j];
+      }
+   }
+
+   for (j = 0; j < 4; ++j) // 0 ~ 3 열
+   {
+      for (i = 0; i < 3; ++i) // 0 ~ 1 행
+      {
+         aList[2][j] += aList[i][j];
+      }
+   }
+
+   
+   for (i = 0; i < 3; ++i)
+   {
+      for(j = 0; j < 4; ++j)
+         printf("%d\t", aList[i][j]);
+      
+      putchar('\n');
+   }
+   return 0;
+}
