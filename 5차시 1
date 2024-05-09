@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include <stdio.h>
+
+int main() {
+    int Fee, age; //요금 나이 함수 선언 
+
+    // 사용자에게 기본 요금과 나이 입력 받기
+    printf("Enter the base fee: ");
+    scanf("%d", &Fee);
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // 최종 요금 계산
+    double fee = GetFee(Fee, age); // 여기서 Getfee함수 정의로 내려가고 
+
+    // 계산된 요금 출력
+    printf("The final fee is: %.2f\n", fee);
+
+    return 0;
+}
+
+double GetFee (int Fee, int age) { //요금과 나이를 받는 변수 끌고내려와서 
+    double finalFee = 0 ;
+
+    if (age >= 0 && age <= 3) {
+        // 0~3세는 100% 할인
+        finalFee = 0.0;
+    }
+    else if (age >= 4 && age <= 13) {
+        // 4~13세는 50% 할인
+        finalFee = Fee * 0.5;
+    }
+    else if (age >= 14 && age <= 19) {
+        // 14~19세는 75% 할인
+        finalFee = Fee * 0.25;
+    }
+    else {
+        // 20세 이상은 할인 없음
+        finalFee = Fee;
+    }
+
+    return finalFee;
