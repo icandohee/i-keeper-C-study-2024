@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char szBuffer[32] = { "You are a girl." };
+	char* pszData = szBuffer + 4;
+
+	printf("%c\n", szBuffer[0]);
+	printf("%c\n", pszData[0]);
+	printf("%c\n", pszData[6]);
+
+	printf("%s\n", szBuffer + 4);
+	printf("%s\n", pszData);
+	printf("%s\n", pszData + 4);
+	return 0;
+}
+
+
+
+
+예제의 실행결과
+Y
+a
+g
+are a girl.
+are a girl.
+a girl.
+
+
+// 세번째 출력의 결과가 왜 g인가 ? 
+ // - - > psz
+ // - - > pszData 선언부를 살려보자. 데이터의 값을  szBuffer +4 으로 넣었다. szBuffer는 배열로 선언이 되었다. 즉 4배열씩 뒤로 미룬 결과가 나온게 된다. 
+ // 따라서 원래 시작점인 Y가 아닌 4칸 뒤로 밀린 a 에서부터 인덱스값이 카운팅 되기 시작한다. 
+// 여섯번째 출력 결과가 왜 a girl 인가 ? 
+//% s 형식 지정자는 printf 함수나 scanf 함수 등에서 사용되며, 문자열을 입력받거나 출력할 때 사용됩니다.
+// 따라서 4번째 인덱스에 해당하는  a 부터 시작해서 널 문자까지 쭉 문자열을 출력하게 된다. a부터 시작되는 이유는 
+// 위의 설명과 같다. 
+
+
++ 보충학습 %s가 아니라 %c라면 
+
+int main() {
+	char szbuffer[32] = { "You are a girl." };
+	//                    012345678901234
+	//                +4 = 1234
+	//                        01234567890
+	// char *test = "You are a girl.";
+	char* pszdata = szbuffer + 4; //index -->
+
+	printf("%c\n", szbuffer[0]);
+	//  char array의 처음주소 : szbuffer
+	//                         [0] 0번째 index/주소에 있는 "값"
+
+	printf("%c\n", pszdata[0]);
+	printf("%c\n", pszdata[6]);
+
+	printf("%c\n", szbuffer + 4); // 890999838 + 4 -> ascii코드 
+
+	//printf("%c\n", 89);  // 컴퓨터가 메모리에 가지는 값은 0, 1의 조합
+						 // 89는 Y 야, 97은 a다
+//  char array의 처음주소 : szbuffer
+//                  2987239 + 4 => 주소값을 일반 값처럼 처리
+//                  
+	printf("%c\n", pszdata);
+	printf("%c\n", pszdata + 4);
+
+	return 0;
+}
+
+예제의 실행결과
+Y
+a
+g
+?
+?
+?
