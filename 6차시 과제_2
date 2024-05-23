@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int numStrings, maxLength;
+    char **strings;
+
+
+    printf("Enter the number of strings: ");
+    scanf("%d", &numStrings);
+
+   
+    printf("Enter the maximum length of the strings: ");
+    scanf("%d", &maxLength);
+
+   
+    strings = malloc(numStrings * sizeof(char *));
+    for (int i = 0; i < numStrings; i++) {
+        strings[i] = malloc((maxLength + 1) * sizeof(char));
+    }
+
+ 
+    for (int i = 0; i < numStrings; i++) {
+        printf("Enter string %d: ", i + 1);
+        scanf(" %[^\n]", strings[i]); // 공백을 포함한 문자열 입력
+    }
+
+    
+    printf("\nStored strings are:\n");
+    for (int i = 0; i < numStrings; i++) {
+        printf("%s\n", strings[i]);
+    }
+
+
+    for (int i = 0; i < numStrings; i++) {
+        free(strings[i]);
+    }
+    free(strings);
+
+    return 0;
+}
